@@ -35,7 +35,7 @@ def jugar(apuesta_inicial, num_tiradas):    #Recibe la apuesta inicial y los int
         moneda = tirar_moneda() #Se tira la moneda
 
         if moneda == 'cara' and dado % 2 == 0:  #Si la moneda es cara y el dado es par
-            ganancias += apuesta * 2    #Se duplica la apuesya
+            ganancias += apuesta * 2    #Se duplica la apuesta
             resultados['ganar'] += 1
             apuesta = apuesta_inicial / 2   #Se divide por la mitad la apuesta inicial
         
