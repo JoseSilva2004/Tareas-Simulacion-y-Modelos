@@ -32,15 +32,27 @@ def jugar(apuesta_inicial, num_tiradas):    # Recibe la apuesta inicial y los in
 
     return ganancias, resultados, dinero_invertido, dinero_gastado, dinero_ganado
 
+# Función para validar la entrada del usuario
+def validar_entrada(mensaje):
+    while True:
+        try:
+            valor = int(input(mensaje))
+            if valor <= 0:  # Asegurarse de que el valor sea positivo
+                print("Error: Ingrese un número mayor que 0.")
+            else:
+                return valor
+        except ValueError:  # Capturar errores si no se ingresa un número
+            print("Error: Ingrese un número entero válido.")
+
 
 if __name__ == "__main__":
     apuesta_inicial = 10000
-    num_tiradas = int(input("Ingrese el numero de tiradas: "))
+    num_tiradas = validar_entrada("Ingrese el número de tiradas: ")
 
     # Ejecutar el juego
     ganancias, resultados, dinero_invertido, dinero_gastado, dinero_ganado = jugar(apuesta_inicial, num_tiradas)
 
-    # Formatear las cantidades con separadores de miles
+    # Imprimir la salida
     print(f"\nDinero invertido: {dinero_invertido:,}$")
     print(f"Dinero gastado: {dinero_gastado:,}$")
     print(f"Dinero ganado: {dinero_ganado:,}$")

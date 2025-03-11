@@ -31,7 +31,7 @@ def simular_rondas(num_rondas):
     return resultados
 
 # Número de rondas a simular
-num_rondas = 5  # numero de rondas a simular
+num_rondas = 5  
 
 # Ejecutamos la simulación
 resultados_simulacion = simular_rondas(num_rondas)

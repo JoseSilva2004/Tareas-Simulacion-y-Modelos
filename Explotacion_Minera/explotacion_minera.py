@@ -26,13 +26,13 @@ for _ in range(num_simulaciones):
     resultados_empresa.append(resultado_empresa)
     ingresos_estado_total += ingresos_estado
 
-#Análidis de resultados
+#Análisis de resultados
 exito = sum(1 for resultado in resultados_empresa if resultado > 0)
 fracaso = num_simulaciones - exito
 promedio_ganancia_empresa = sum(resultados_empresa) / num_simulaciones
 promedio_ingresos_estado = ingresos_estado_total / num_simulaciones
 
-# Formatear la salida con separadores de miles
+# Imprimir la salida
 print(f"Cantidad de exploraciones: {num_simulaciones:,}")
 print(f"Tasa de éxito: {exito / num_simulaciones * 100:.2f}%")
 print(f"Tasa de fracaso: {fracaso / num_simulaciones * 100:.2f}%")
